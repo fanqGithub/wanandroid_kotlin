@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/iv_banner_head_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#999999"
+            android:paddingTop="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner_head_bg"
+            android:visibility="visible" />
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            app:image_scale_type="fit_xy" />
+
+        <!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+        <!--        android:id="@+id/swipeRefresh"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="match_parent"-->
+        <!--        android:layout_below="@+id/banner">-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/banner"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            tools:listitem="@layout/item_home_article" />
+
+        <!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+    </RelativeLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
