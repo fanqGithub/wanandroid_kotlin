@@ -18,6 +18,7 @@ import com.fanqi.wankt.constant.Constant
 import com.fanqi.wankt.ui.collection.MyCollectionsActivity
 import com.fanqi.wankt.ui.login.LoginActivity
 import com.fanqi.wankt.ui.login.LoginViewModel
+import com.fanqi.wankt.ui.todo.TodoActivity
 import com.fanqi.wankt.utils.toast
 import kotlinx.android.synthetic.main.mine_fragment.*
 
@@ -43,6 +44,11 @@ class MineFragment : Fragment(), View.OnClickListener {
                     }
                 }
             }
+            R.id.todoListView -> {
+                Intent(activity, TodoActivity::class.java).run {
+                    startActivity(this)
+                }
+            }
         }
     }
 
@@ -52,6 +58,7 @@ class MineFragment : Fragment(), View.OnClickListener {
     private lateinit var tvCollections: TextView
     private lateinit var tvSort: TextView
     private lateinit var collectionView: RelativeLayout
+    private lateinit var todoView: RelativeLayout
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -68,8 +75,10 @@ class MineFragment : Fragment(), View.OnClickListener {
         tvCollections = root.findViewById(R.id.tvCollections)
         tvSort = root.findViewById(R.id.tvSort)
         collectionView = root.findViewById(R.id.collectionsView)
+        todoView = root.findViewById(R.id.todoListView)
         userNameTv.setOnClickListener(this)
         collectionView.setOnClickListener(this)
+        todoView.setOnClickListener(this)
         setStatusColor(resources.getColor(R.color.colorPrimary))
         initView()
 

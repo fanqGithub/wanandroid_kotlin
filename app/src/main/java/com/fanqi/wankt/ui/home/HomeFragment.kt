@@ -126,8 +126,8 @@ class HomeFragment : Fragment() {
                     nexPst = 0
                 }
                 val vibrantColor = ColorUtils.blendARGB(
-                    imageLoader.getMutedLightColor(position),
-                    imageLoader.getMutedLightColor(nexPst),
+                    imageLoader.getVibrantColor(position),
+                    imageLoader.getVibrantColor(nexPst),
                     positionOffset
                 )
                 ivBannerHeadBg.setBackgroundColor(vibrantColor)
@@ -140,7 +140,7 @@ class HomeFragment : Fragment() {
                 if (isInit) {
                     isInit = false
                     Handler().postDelayed({
-                        val vibrantColor = imageLoader.getMutedLightColor(0)
+                        val vibrantColor = imageLoader.getVibrantColor(0)
                         ivBannerHeadBg.setBackgroundColor(vibrantColor)
 //                        refreshLayout.setBackgroundColor(vibrantColor)
                         setStatusColor(vibrantColor)
