@@ -22,7 +22,7 @@ class MyViewGroupA(context: Context?, attrs: AttributeSet?) : RelativeLayout(con
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
         Logger.d("MyViewGroupA onInterceptTouchEvent")
-        return true
+        return false
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {

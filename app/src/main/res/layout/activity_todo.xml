@@ -7,19 +7,25 @@
     tools:context=".ui.todo.TodoActivity">
 
     <com.fanqi.wankt.view.MyViewGroupA
+        android:id="@+id/btnGroup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorPrimary"
+        android:onClick="groupAclick">
 
         <com.fanqi.wankt.view.MyLayout
+            android:id="@+id/btnLayout"
             android:layout_width="300dp"
             android:layout_height="200dp"
-            android:background="@color/black">
+            android:background="@color/black"
+            android:onClick="layoutClick">
 
             <com.fanqi.wankt.view.MyView
+                android:id="@+id/btnView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@color/colorAccent"/>
+                android:background="@color/colorAccent"
+                android:onClick="viewClick"/>
 
         </com.fanqi.wankt.view.MyLayout>
     </com.fanqi.wankt.view.MyViewGroupA>

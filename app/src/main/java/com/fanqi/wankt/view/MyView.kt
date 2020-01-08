@@ -21,4 +21,5 @@ class MyView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
         Logger.d("MyView onTouchEvent")
         return super.onTouchEvent(event)
     }
+
 }
