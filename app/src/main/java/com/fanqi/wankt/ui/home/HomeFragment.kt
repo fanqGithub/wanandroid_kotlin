@@ -30,6 +30,7 @@ import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.scwang.smartrefresh.layout.header.ClassicsHeader
 import com.youth.banner.Banner
 import com.youth.banner.BannerConfig
+import java.io.File
 
 
 //https://androidwave.com/android-paging-library/
@@ -92,6 +93,7 @@ class HomeFragment : Fragment() {
 //            }
 //
 //        })
+
         refreshLayout.setOnRefreshListener {
             it.finishRefresh(2000)
         }

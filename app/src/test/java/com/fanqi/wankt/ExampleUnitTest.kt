@@ -68,4 +68,16 @@ class ExampleUnitTest {
     }
 
 
+    @Test
+    fun test(){
+        //如何比较两个字符串？
+        //1.== 操作符
+        //2.compoareTo()扩展函数
+        var name1="fan"
+        var name2="fan1"
+
+        println(name1.compareTo(name2))
+
+    }
+
 }

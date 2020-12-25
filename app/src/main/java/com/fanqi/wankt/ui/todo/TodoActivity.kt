@@ -5,11 +5,15 @@ import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import com.fanqi.wankt.R
+import com.fanqi.wankt.common.bean.UserCoin
 import com.fanqi.wankt.utils.Logger
 import com.fanqi.wankt.utils.toast
 import kotlinx.android.synthetic.main.activity_todo.*
+import kotlinx.coroutines.*
 
 class TodoActivity : AppCompatActivity() {
+
+    private var mainScope = MainScope()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,8 +22,49 @@ class TodoActivity : AppCompatActivity() {
             override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
                 return true
             }
-
         })
+        init()
+    }
+
+
+    fun init(){
+
+        println("1:current thread is ${Thread.currentThread().name}")
+
+        GlobalScope.launch {
+
+            println("2:current thread is ${Thread.currentThread().name}")
+
+            delay(2000)
+
+            println("3:current thread is ${Thread.currentThread().name}")
+        }
+
+        runBlocking {
+            val job1 = launch {
+
+                println("current 1")
+                yield()
+                println("current 3")
+                yield()
+                println("current 5")
+            }
+
+            val job2 = launch {
+
+                println("current 2")
+                yield()
+                println("current 4")
+                yield()
+                println("current 6")
+            }
+
+
+        }
+
+//        var userCoin: UserCoin? =null
+//        println(userCoin.username)
+
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {

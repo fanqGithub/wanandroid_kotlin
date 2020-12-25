@@ -4,7 +4,7 @@ import android.util.Log
 
 /**
  * Created by fanqi on 2019-12-20.
- * Description:
+ * Description:对象声明
  */
 object Logger {
 
