@@ -14,7 +14,11 @@ kotlin，在我们目前的项目开发中，也只是和Java混着使用，也�
 
 # 主要开源库
 
+# 功能截图
+
+<img src="https://github.com/fanqGithub/wanandroid_kotlin/raw/master/images/Screenshot_20200102-140934.jpg" width="320" height="640" alt="图片描述文字"/><img src="https://github.com/fanqGithub/wanandroid_kotlin/raw/master/images/Screenshot_20200102-140952.jpg" width="320" height="640" alt="图片描述文字"/><img src="https://github.com/fanqGithub/wanandroid_kotlin/raw/master/images/Screenshot_20200102-140959.jpg" width="320" height="640" alt="图片描述文字"/><img src="https://github.com/fanqGithub/wanandroid_kotlin/raw/master/images/Screenshot_20200102-141005.jpg" width="320" height="640" alt="图片描述文字"/><img src="https://github.com/fanqGithub/wanandroid_kotlin/raw/master/images/Screenshot_20200102-141012.jpg" width="320" height="640" alt="图片描述文字"/><img src="https://github.com/fanqGithub/wanandroid_kotlin/raw/master/images/Screenshot_20200102-141124.jpg" width="320" height="640" alt="图片描述文字"/>
 
 
 # 特别鸣谢
 
+洋神玩Android提供的API，以及各位优秀的开源开发者提供的优秀项目作为参考。
